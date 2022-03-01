@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class WinterMarketApplication {
 	
+	// Здравствуйте! Продолжаю отставать от графика. Доделаю до 04.03.2022.
+
+
 	// Домашнее задание:
 	// Реализовать оформление заказа:
 	// 1. На фронте добавить в отделе корзины кнопку оформить заказ
