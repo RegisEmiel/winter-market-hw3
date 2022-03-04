@@ -34,9 +34,12 @@ public class OrderController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createOrder(Principal principal, @RequestBody OrderDataDTO orderData) {
         if (principal == null)
-            throw new ResourceNotFoundException("Пользователь с именем " + principal.getName() + " не найден");
+            throw new ResourceNotFoundException("Пользователь не задан");
 
         Optional<User> user = userService.findByUsername(principal.getName());
+
+        if (!user.isPresent())
+            throw new ResourceNotFoundException("Пользователь с именем " + principal.getName() + " не найден");
 
 
         orderService.createOrder(user.get(), orderData);
