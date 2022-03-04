@@ -89,6 +89,19 @@ angular.module('app', ['ngStorage']).controller('indexController', function ($sc
         });
     }
 
+    $scope.createOrder = function(){
+        $http.post('http://localhost:8189/winter/api/v1/orders', $scope.orderData).then(function (response) {
+            alert("Заказ сформирован");
+            $scope.loadOrders();
+        });
+    }
+
+     $scope.loadOrders = function () {
+            $http.get('http://localhost:8189/winter/api/v1/orders').then(function (response) {
+                $scope.orders = response.data;
+            });
+        }
+
     $scope.loadProducts();
     $scope.loadCart();
 });

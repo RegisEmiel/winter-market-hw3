@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class WinterMarketApplication {
-	
+
 	// Здравствуйте! Продолжаю отставать от графика. Доделаю до 04.03.2022.
 
 

@@ -95,7 +95,43 @@
         </tr>
         </tbody>
     </table>
+
     <button type="button" class="btn btn-secondary" ng-click="clearCart()">Очистить корзину</button>
+    <br>
+
+    <form class="align-left" ng-submit="createOrder()">
+        <p>Адрес:</p>
+        <input id="orderAddressField" class="form-control" ng-model="orderData.address" type="text"
+               aria-describedby="inputGroup-sizing-sm">
+
+        <br>
+        <p>Телефон:</p>
+        <input id="orderPhoneField" class="form-control" ng-model="orderData.phone" type="text"
+               aria-describedby="inputGroup-sizing-sm">
+        <br>
+
+        <button id="orderSubmit" class="btn btn-primary" type="submit">Оформить заказ</button>
+    </form>
+
+    <br>
+
+    <h3>Список заказов</h3>
+    <table class="table table-hover" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>Заказ</td>
+            <td>Стоимость</td>
+            <td>Адрес</td>
+            <td>Телефон</td>
+        </tr>
+        <tbody>
+        <tr ng-repeat="o in orders">
+            <td>{{o.id}}</td>
+            <td>{{o.totalPrice}}</td>
+            <td>{{o.address}}</td>
+            <td>{{o.phone}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
