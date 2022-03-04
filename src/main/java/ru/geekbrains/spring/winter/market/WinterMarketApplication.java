@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class WinterMarketApplication {
 
+	// Домашняя работа завершена
+
 	// Домашнее задание:
 	// Реализовать оформление заказа:
 	// 1. На фронте добавить в отделе корзины кнопку оформить заказ
